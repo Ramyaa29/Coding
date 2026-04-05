@@ -1,6 +1,6 @@
 import java.util.*;
 class Main{
-    public static void main(String[] args){
+    public static void main(String[] args) {
 //        int[] arr = {1,2,3,4};
 ////        int n=5;
 //        int[] arr1 = new int[2];
@@ -20,13 +20,14 @@ class Main{
 //        System.out.println(Arrays.toString(arr));
 //        System.out.println(Arrays.toString(arr1));
 //        System.out.println(length);
-        Scanner sc = new Scanner(System.in);
+//
+        int[] arr1 = {1,2,3,4};
+        int[] arr2 = {5,6,7,};
+        int arr1len= arr1.length;
+        int arr2len = arr2.length;
 
-        int n= sc.nextInt();
-        int[] arr = new int[n];
-        for(int i=0;i<n;i++){
-            arr[i]= sc.nextInt();
-        }
-        System.out.println(Arrays.toString(arr));
+        int[] concatenatedArr= new int[arr1len+arr2len];
+        System.arraycopy(arr1,0,concatenatedArr, 0, arr1len);
+        System.out.println(Arrays.toString(concatenatedArr));
     }
 }
